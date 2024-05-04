@@ -1,0 +1,29 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+    asset: string;
+   
+}
+const { href, title, body, asset } = Astro.props;
+---
+
+<div class=`card text-center p-md-3 service overflow-hidden`>
+    <img src={asset} class="card-img-top bg-primary rounded-circle mx-auto p-2 " style="width: 75px; margin-top: 30px; margin-bottom: 25px">
+    <div class="carta">
+      <h5 class="fs-6 pb-2">{title}</h5>
+      <p class="fs-6 text-black-50 d-none d-lg-block">{body}</p>
+    </div>
+    <a href={href} class="btn btn-outline-secondary my-xl-4 mb-md-5 mb-3 px-md-4 ">Learn more</a>
+  </div>
+  <style>
+    .service{
+      min-height: 250px;
+      max-height: 470px;
+      max-width: 400px;
+    }
+    .carta{
+      min-height: 75px;
+    }
+  </style>
